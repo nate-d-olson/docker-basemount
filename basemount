@@ -4,9 +4,9 @@
 set -e
 
 VERSION="latest"
-IMAGE="sthysel/basemount:${VERSION}"
+IMAGE="basemount"
 
 # Setup volume mounts
 VOLUMES="-v $(pwd):/data -v ${HOME}:/root"
 echo $VOLUMES
-exec docker run -it --privileged=true ${VOLUMES} ${IMAGE} $@
+exec docker run -it --privileged=true ${VOLUMES} ${IMAGE} /bin/bash
