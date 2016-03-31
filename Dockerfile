@@ -15,4 +15,4 @@ RUN env --unset=DEBIAN_FRONTEND
 RUN bash -c "$(curl -L https://basemount.basespace.illumina.com/install/)"
 VOLUME /data
 WORKDIR /data
-ENTRYPOINT ["basemount"]
+# ENTRYPOINT ["basemount"]
